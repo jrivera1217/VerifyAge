@@ -1,11 +1,12 @@
-function checkVoting(age){
+function checkVoting(){
+    let age = document.getElementById("input").value;
     if(age < 18){
-        console.log("Sorry, you are not eligible to vote yet.")
+        return document.getElementById("result").textContent = "Sorry, you are not eligible to vote yet."
     }
     else if(age >= 18){
-        console.log("You are eligible to vote!")
+        return document.getElementById("result").textContent = "You are eligible to vote!"
+    }
+    else {
+        return document.getElementById("result").textContent = "Wrong Data Type"
     }
 }
-console.log(checkVoting(17))
-console.log(checkVoting(25))
-console.log(checkVoting(18))
